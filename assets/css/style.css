@@ -29,6 +29,16 @@ a:focus {
   text-decoration: none;
 }
 
+@font-face {
+  font-family: "Beacon";
+  src: url(../fonts/Beacon.otf) format("opentype");
+}
+
+@font-face {
+  font-family: "Panton";
+  src: url(../fonts/Panton-BlackCaps.otf) format("opentype");
+}
+
 p {
   padding: 0;
   margin: 0 0 30px 0;
@@ -244,6 +254,22 @@ h6 {
   font-weight: 400;
   letter-spacing: 2px;
   text-transform: uppercase;
+  color: white;
+}
+
+/* ENEEC */
+.logo .font-panton {
+  font-family: "Beacon", sans-serif;
+  font-weight: 200;
+  color: white;
+}
+
+/* 2026 */
+.logo .font-orbitron {
+  font-family: "Panton", sans-serif;
+  font-weight: 100;
+  color: #a4d6b0
+  /*color: #9effc1;*/
 }
 
 #header .logo a {
@@ -310,7 +336,7 @@ h6 {
 .navbar .active,
 .navbar .active:focus,
 .navbar li:hover>a {
-  color: #2c633b;
+  color: #a4d6b0;
 }
 
 .navbar .dropdown ul {
@@ -519,40 +545,53 @@ section {
   padding: 80px 0;
 }
 
+.about-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 300px; /* ⬅️ add more or less to control spacing */
+}
+
 #about .about-img {
   overflow: hidden;
   padding: 0 0 20px 0;
 }
 
-#about .about-img img {
-  max-width: 100%;
+.about-img img {
+  width: 100%;
+  border-radius: 10px;
+  object-fit: cover;
 }
+
 
 @media (max-width: 768px) {
-  #about .about-img {
-    height: auto;
+  .about-wrapper {
+    flex-direction: column;
   }
 
-  #about .about-img img {
-    margin-left: 0;
-    padding-bottom: 30px;
+  .about-img img {
+    margin-bottom: 20px;
   }
 }
 
-#about .about-content {
+.about-content {
+  flex: 1;
   background: #fff;
 }
 
-#about .about-title {
+.about-title {
   color: #333;
   font-weight: 700;
   font-size: 28px;
+  margin-bottom: 15px;
+  margin-left: 30px;
 }
 
-#about .about-text {
-  line-height: 26px;
+.about-text {
+  line-height: 1.6;
   margin-bottom: 15px;
   text-align: justify;
+  margin-left: 30px;
 }
 
 #about .about-text:last-child {
@@ -613,6 +652,63 @@ section {
   margin-left: 80px;
   line-height: 24px;
 }
+
+.planificacao {
+  text-align: center;
+  margin-top: 60px;
+}
+
+.tables-wrapper {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.schedule {
+  flex: 1;
+  min-width: 320px;
+}
+
+/* Títulos “11 DE FEVEREIRO” e “12 DE FEVEREIRO” */
+.schedule h3 {
+  font-family: inherit;       /* usa a mesma fonte do resto do site */
+  font-size: 1.5rem;            /* ajusta o tamanho */
+  font-weight: 500;           /* equilíbrio visual */
+  text-align: center;         /* centraliza em relação à tabela */
+  margin-bottom: 10px;
+  color: inherit;             /* usa a cor global do texto */
+}
+
+/* Tabelas */
+.schedule table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
+  text-align: center; 
+}
+
+.schedule th {
+  background-color: #2d643c;
+  color: #fff;
+  font-weight: 600;
+  text-transform: uppercase;
+  border: none;
+  padding: 10px;
+}
+
+.schedule td {
+  background-color: rgba(164, 214, 176, 0.3);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 8px;
+  text-align: center;
+}
+
+
+
+
+
+
 
 /* Sponsors Section
 --------------------------------*/
@@ -872,6 +968,8 @@ section {
   font-size: 18px;
   margin: 0 2px;
 }
+
+
 
 /* Contact Section
 --------------------------------*/

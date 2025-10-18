@@ -1,13 +1,7 @@
-# ENEEC_2025
+# ENEEC_2026
 
-# LINK DO ANO PASSADO
+## LINK DO ANO PASSADO
 https://eneec.web.ua.pt
 
-# To do
-
-## 3/12
--  mudar logos pedir a imagem .ico
--  por logo no topo da pagina antes do 
-
-## Falta
--  perguntar como a imagem quer por o programa e merch
+## To do
+- Patrocinios ficam como entrevistas
