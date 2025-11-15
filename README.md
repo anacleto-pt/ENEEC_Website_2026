@@ -5,7 +5,7 @@ This repository contains the source code for the official website of ENEEC 2026,
 
 ## 🚀 Preview
 
-[![ENEEC 2026 Website Preview](assets\.readme\site.gif)]
+[![ENEEC 2026 Website Preview](assets/.readme/site.gif)]
 
 ## 🎯 About the Event
 
