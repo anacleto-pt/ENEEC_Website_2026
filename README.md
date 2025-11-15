@@ -5,8 +5,7 @@ This repository contains the source code for the official website of ENEEC 2026,
 
 ## 🚀 Preview
 
-[![ENEEC 2026 Website Preview](assets/Gravacaodoecra2025-11-15as12.20.10-ezgif.com-speed.gif)](https://eneec.web.ua.pt/)
-
+[ENEEC 2026 Website Preview](assets/Gravacaodoecra2025-11-15as12.20.10-ezgif.com-speed.gif)
 
 ## 🎯 About the Event
 
