@@ -13,7 +13,7 @@ As we discussed, you can't embed the live website directly. The best way to show
 2.  Add it to a folder in this repository (e.g., `/assets/screenshot.png`).
 3.  Replace the code below with your image path and URL.
 
-[![ENEEC 2026 Website Preview](path/to/your/assets/screenshot.png)](https://eneec.web.ua.pt/)
+[![ENEEC 2026 Website Preview](assets/Gravacaodoecra2025-11-15as12.20.10-ezgif.com-speed.gif)](https://eneec.web.ua.pt/)
 
 
 ## 🎯 About the Event
