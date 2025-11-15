@@ -1,7 +1,6 @@
 # ENEEC 2026 - Encontro Nacional de Estudantes de Engenharia Computacional
 
-[![Live Site](https://img.shields.io/badge/Live_Site-Visit_Now-brightgreen.svg)](https://eneec.web.ua.pt/)
-
+This repository is only referred to the 2026 edition, any edition before or after the website is not my work, in here you can find the code I wrote for the 2026 edtition.
 This repository contains the source code for the official website of ENEEC 2026, the National Meeting of Computational Engineering Students at the University of Aveiro.
 
 ## 🚀 Preview
