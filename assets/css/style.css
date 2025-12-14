@@ -708,10 +708,40 @@ section {
 
 
 
+/* Interview Section
+--------------------------------*/
+#interview {
+  background: #f9f9f9; /* Light grey background to separate from other white sections */
+  padding: 80px 0;
+}
 
+#interview .interview-question {
+  color: #333;
+  font-weight: 700;
+  font-size: 1.1rem;
+  margin-top: 20px;
+  font-family: "Raleway", sans-serif;
+}
+
+#interview .interview-answer {
+  color: #555;
+  font-style: italic;
+  border-left: 4px solid #2c633b; /* The ENEEC Green */
+  padding-left: 15px;
+  margin-bottom: 25px;
+  background-color: #fff;
+  padding: 15px;
+  border-radius: 0 5px 5px 0;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+#interview img {
+  border-radius: 8px; /* Smooth corners for images */
+  margin-bottom: 20px;
+}
 
 /* Sponsors Section
---------------------------------*/
+--------------------------------
 #sponsors {
   background: #fff;
   padding: 80px 0;
@@ -724,6 +754,7 @@ section {
 #sponsors img.sponsor-2022 {
   filter: grayscale(100%);
 }
+  */
 
 /* Merch Section
 --------------------------------*/
