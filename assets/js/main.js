@@ -260,8 +260,6 @@
   });
 
 
-
-
   /**
    * Team isotope and filter
    */
@@ -327,6 +325,52 @@
 
   });
 
+  /* * ==========================================
+   * IMAGE TRACK SLIDER LOGIC (Merchandise)
+   * ==========================================
+   */
+  const track = document.getElementById("image-track");
+
+  if (track) {
+    const handleOnDown = e => track.dataset.mouseDownAt = e.clientX;
+
+    const handleOnUp = () => {
+      track.dataset.mouseDownAt = "0";  
+      track.dataset.prevPercentage = track.dataset.percentage;
+    }
+
+    const handleOnMove = e => {
+      if(track.dataset.mouseDownAt === "0") return;
+      
+      const mouseDelta = parseFloat(track.dataset.mouseDownAt) - e.clientX,
+            maxDelta = window.innerWidth / 2;
+      
+      const percentage = (mouseDelta / maxDelta) * -100,
+            nextPercentageUnconstrained = parseFloat(track.dataset.prevPercentage) + percentage,
+            nextPercentage = Math.max(Math.min(nextPercentageUnconstrained, 0), -100);
+      
+      track.dataset.percentage = nextPercentage;
+      
+      track.animate({
+        transform: `translate(${nextPercentage}%, -50%)`
+      }, { duration: 1200, fill: "forwards" });
+      
+      for(const image of track.getElementsByClassName("image")) {
+        image.animate({
+          objectPosition: `${100 + nextPercentage}% center`
+        }, { duration: 1200, fill: "forwards" });
+      }
+    }
+
+    /* Event Listeners - Usando addEventListener para evitar conflitos */
+    window.addEventListener('mousedown', e => handleOnDown(e));
+    window.addEventListener('touchstart', e => handleOnDown(e.touches[0]));
+    window.addEventListener('mouseup', e => handleOnUp(e));
+    window.addEventListener('touchend', e => handleOnUp(e.touches[0]));
+    window.addEventListener('mousemove', e => handleOnMove(e));
+    window.addEventListener('touchmove', e => handleOnMove(e.touches[0]));
+  }
+
 })()
 
 // when you click on the image in about section, annoying music plays or stops
@@ -347,4 +391,4 @@ function surprise() {
 audio.addEventListener('ended', function() {
   this.currentTime = 0;
   this.play();
-}, false);
+}, false); 

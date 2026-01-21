@@ -763,6 +763,22 @@ section {
   padding: 80px 0;
 }
 
+#image-track {
+  display: flex;
+  gap: 4vmin;
+  position: relative;
+  top: 50%;
+  transform: translate(0%, -50%); 
+  user-select: none; /* -- Prevent image highlighting -- */
+}
+
+#image-track > .image {
+  width: 40vmin;
+  height: 56vmin;
+  object-fit: cover;
+  object-position: 100% center;
+}
+
 
 /* Portfolio Section
 --------------------------------*/
