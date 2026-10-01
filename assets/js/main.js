@@ -261,7 +261,7 @@
 
 
   /**
-   * Team isotope and filter
+   * Team isotope, filter, keyboard nav, touch toggle
    */
   window.addEventListener('load', () => {
     let teamContainer = select('.team-container');
@@ -273,17 +273,32 @@
 
       let teamFilters = select('#team-flters li', true);
 
-      on('click', '#team-flters li', function(e) {
-        e.preventDefault();
+      const activateFilter = function() {
         teamFilters.forEach(function(el) {
           el.classList.remove('filter-active');
+          el.setAttribute('aria-pressed', 'false');
         });
         this.classList.add('filter-active');
-
-        teamIsotope.arrange({
-          filter: this.getAttribute('data-filter')
-        });
+        this.setAttribute('aria-pressed', 'true');
+        teamIsotope.arrange({ filter: this.getAttribute('data-filter') });
         aos_init();
+      };
+
+      on('click', '#team-flters li', activateFilter, true);
+
+      on('keydown', '#team-flters li', function(e) {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          activateFilter.call(this);
+        }
+      }, true);
+
+      // Click toggles caption open/close on pointer devices (touch laptops, etc.)
+      on('click', '.team-tile', function(e) {
+        if (e.target.closest('a')) return;
+        const wasOpen = this.classList.contains('is-open');
+        select('.team-tile', true).forEach(function(t) { t.classList.remove('is-open'); });
+        if (!wasOpen) this.classList.add('is-open');
       }, true);
     }
 
